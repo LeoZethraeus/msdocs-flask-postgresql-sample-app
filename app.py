@@ -14,7 +14,7 @@ csrf = CSRFProtect(app)
 if 'WEBSITE_HOSTNAME' not in os.environ:
     # local development, where we'll use environment variables
     print("Loading config.development and environment variables from .env file.")
-    print("Test")
+    print("GOT HERE")
     app.config.from_object('azureproject.development')
 else:
     # production
