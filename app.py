@@ -14,6 +14,7 @@ csrf = CSRFProtect(app)
 if 'WEBSITE_HOSTNAME' not in os.environ:
     # local development, where we'll use environment variables
     print("Loading config.development and environment variables from .env file.")
+    print("Test")
     app.config.from_object('azureproject.development')
 else:
     # production
@@ -24,7 +25,7 @@ app.config.update(
     SQLALCHEMY_DATABASE_URI=app.config.get('DATABASE_URI'),
     SQLALCHEMY_TRACK_MODIFICATIONS=False,
 )
-
+print('hello'
 # Initialize the database connection
 db = SQLAlchemy(app)
 
