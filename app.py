@@ -25,7 +25,7 @@ app.config.update(
     SQLALCHEMY_DATABASE_URI=app.config.get('DATABASE_URI'),
     SQLALCHEMY_TRACK_MODIFICATIONS=False,
 )
-print('hello'
+
 # Initialize the database connection
 db = SQLAlchemy(app)
 
