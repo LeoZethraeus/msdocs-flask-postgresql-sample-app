@@ -313,7 +313,7 @@ resource postgresServer 'Microsoft.DBforPostgreSQL/flexibleServers@2022-01-20-pr
     administratorLogin: 'postgresadmin'
     administratorLoginPassword: databasePassword
     storage: {
-      storageSizeGB: 128
+      storageSizeGB: 32
     }
     backup: {
       backupRetentionDays: 7
@@ -352,7 +352,7 @@ resource redisCache 'Microsoft.Cache/redis@2023-04-01' = {
     sku:{
       capacity: 1
       family:'C'
-      name:'Standard'
+      name:'Basic'
     }
     enableNonSslPort:false
     redisVersion:'6'
